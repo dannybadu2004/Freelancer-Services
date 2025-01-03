@@ -1,10 +1,8 @@
 {
-  "name": "professional-services",
+  "name": "freelancer-services",
   "version": "1.0.0",
-  "description": "Un site static pentru serviciile tale profesionale",
   "scripts": {
-    "build": "echo 'No build needed, this is a static site.'"
-  },
-  "author": "",
-  "license": "ISC"
+    "build": "echo 'Building static site...' && cp -R * public/",
+    "start": "echo 'Starting static site...'"
+  }
 }
