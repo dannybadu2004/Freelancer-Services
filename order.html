@@ -3,44 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Service</title>
+    <title>Order</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Place Your Order</h1>
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">Professional Services</div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="order.html">Order</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <main class="site-main">
+        <section class="order">
+            <div class="container">
+                <h1>Place Your Order</h1>
+                <form action="/submit-order" method="POST">
+                    <label for="service">Choose Service:</label>
+                    <select id="service" name="service">
+                        <option value="photo-editing">Photo Editing</option>
+                        <option value="video-editing">Video Editing</option>
+                        <option value="graphic-design">Graphic Design</option>
+                    </select>
 
-    <div class="container">
-        <form action="/submit-order" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+                    <label for="message">Additional Details:</label>
+                    <textarea id="message" name="message" placeholder="Add a message..." required></textarea>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="file">Upload File:</label>
+                    <input type="file" id="file" name="file" accept="image/*,video/*">
 
-            <label for="service">Select Service:</label>
-            <select id="service" name="service" required>
-                <option value="basic">Basic Photo Editing (€6)</option>
-                <option value="advanced">Advanced Photo Editing (€8)</option>
-            </select>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-            <label for="details">Order Details:</label>
-            <textarea id="details" name="details" required></textarea>
-
-            <button type="submit">Submit Order</button>
-        </form>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Freelancer Services. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-info">
+                <p>&copy; 2025 Professional Services. All Rights Reserved.</p>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
