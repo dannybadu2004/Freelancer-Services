@@ -1,8 +1,0 @@
-{
-  "name": "freelancer-services",
-  "version": "1.0.0",
-  "scripts": {
-    "build": "echo 'Building static site...' && cp -R * public/",
-    "start": "echo 'Starting static site...'"
-  }
-}
